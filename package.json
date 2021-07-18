@@ -1,18 +1,27 @@
 {
   "name": "quasar-apollo-sample",
   "version": "0.0.1",
-  "description": "A Quasar Framework app",
-  "productName": "Quasar App",
-  "author": "Yukit02 <yukijobit02@gmail.com>",
   "private": true,
+  "description": "A Quasar Framework app",
+  "author": "Yukit02 <yukijobit02@gmail.com>",
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue ./",
+    "apollo": "vue-cli-service apollo:dev --generate-schema",
+    "apollo:schema:generate": "vue-cli-service apollo:schema:generate",
+    "apollo:schema:publish": "vue-cli-service apollo:schema:publish",
+    "apollo:start": "vue-cli-service apollo:start",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
+    "@vue/cli-shared-utils": "^4.5.13",
     "core-js": "^3.6.5",
-    "quasar": "^2.0.0"
+    "graphql-type-json": "^0.2.1",
+    "lowdb": "^1.0.0",
+    "mkdirp": "^0.5.1",
+    "quasar": "^2.0.0",
+    "shortid": "^2.2.8",
+    "vue-apollo": "^3.0.0-beta.11"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.13.14",
@@ -22,7 +31,9 @@
     "@typescript-eslint/parser": "^4.16.1",
     "eslint": "^7.14.0",
     "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-vue": "^7.0.0"
+    "eslint-plugin-vue": "^7.0.0",
+    "graphql-tag": "^2.9.0",
+    "vue-cli-plugin-apollo": "~0.22.2"
   },
   "browserslist": [
     "last 10 Chrome versions",
@@ -39,5 +50,6 @@
     "node": ">= 12.22.1",
     "npm": ">= 6.13.4",
     "yarn": ">= 1.21.1"
-  }
+  },
+  "productName": "Quasar App"
 }
